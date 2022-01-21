@@ -25,23 +25,24 @@ const fs = require('fs');
     
     
     await page.goto('https://br.advfn.com/investimentos/futuros/soja', {waitUntil: "networkidle2"})
-    const soja = 'Brazilian Corn BRL ' + await page.$eval('span[class="PriceTextUp"]', (span) => {
+    const soja = 'Brazilian soya BRL ' + await page.$eval('span[class="PriceTextUp"]', (span) => {
         return span.innerHTML
     })
     
     
     await page.goto('https://br.advfn.com/investimentos/futuros/cafe', {waitUntil: "networkidle2"})
-    const cafe = 'Brazilian Corn BRL ' + await page.$eval('span[class="PriceTextUp"]', (span) => {
+    const cafe = 'Brazilian coffee BRL ' + await page.$eval('span[class="PriceTextUp"]', (span) => {
         return span.innerHTML
     })
 
     
-    await page.goto('https://br.advfn.com/investimentos/futuros/milho', {waitUntil: "networkidle2"})
-    const milho = 'Brazilian Corn BRL ' + await page.$eval('span[class="PriceTextUp"]', (span) => {
+    await page.goto('https://br.advfn.com/investimentos/futuros/euro', {waitUntil: "networkidle2"})
+    const euro = 'Euro Expetation BRL ' + await page.$eval('span[class="PriceTextUp"]', (span) => {
         return span.innerHTML
     })
 
     cotacao.push({dolar})
+    cotacao.push({euro})
     cotacao.push({gado})
     cotacao.push({milho})
     cotacao.push({soja})
