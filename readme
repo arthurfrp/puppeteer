@@ -1,0 +1,30 @@
+# Agro-business-api API Documentation
+# Live Brazilian agro business market prices.
+
+Access:
+https://rapidapi.com/ribeirodepaula.arthur/api/agro-business-api
+
+# CODE SNIPPET:
+
+const axios = require('axios');
+const options = {
+  method: 'GET',
+  url: 'https://agro-business-api.p.rapidapi.com/wheat',
+  headers: {
+    'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+    'X-RapidAPI-Host': 'agro-business-api.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
+
+
+
+##### to more information contact me! #####
+### https://www.linkedin.com/in/francoribeiroarthur
